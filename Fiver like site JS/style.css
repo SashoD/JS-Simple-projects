@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background: rgba(0, 0, 0, 0.696);
+}
+
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+}
+
+header .navbar {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .menu-links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar .menu-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+.navbar .menu-links a:hover {
+    color: rgba(0, 128, 0, 0.492);
+}
+
+.navbar .menu-links .leanguage-items span {
+    font-size: 1.3rem;
+}
+
+.navbar .menu-links .join-btn a {
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 8px 15px;
+}
+
+.navbar .menu-links .join-btn a:hover {
+    color: #fff;
+    background: rgba(0, 128, 0, 0.492);
+    border-color: transparent;
+}
+
+.hero-section {
+    height: 100vh;
+    background: url(images/hero-img.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.hero-section .content {
+    max-width: 1400px;
+    margin: 0 auto 40px;
+    width: 100%;
+}
+
+.hero-section .content h1 {
+    color: #fff;
+    font-size: 3rem;
+    max-width: 630px;
+}
+
+.hero-section .search-form {
+    display: flex;
+    height: 48px;
+    max-width: 630px;
+    margin-top: 30px;
+}
+
+.hero-section .search-form input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background: #fff;
+    font-size: 1rem;
+    padding: 0 15px;
+    border-radius: 4px 0 0 4px;
+}
+
+.hero-section .search-form button {
+    outline: none;
+    border: none;
+    background: rgba(0, 128, 0, 0.492);
+    height: 100%;
+    width: 60px;
+    color: #fff;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+}
+
+.hero-section .popular-tags {
+    display: flex;
+    color: #fff;
+    gap: 24px;
+    font-size: 0.9rem;
+    margin-top: 25px;
+    font-weight: 500;
+    align-items: center;
+
+}
+
+.hero-section .popular-tags .tags {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.hero-section .tags li a {
+    color: #fff;
+    border: 1px solid white;
+    border-radius: 40px;
+    padding: 4px 12px;
+    text-decoration: none;
+    transition: 0.2s ease;
+
+}
+
+.hero-section .tags li a:hover {
+    color: black;
+    background: #fff;
+}
+
+.navbar #hamburger-btn {
+    color: #fff;
+    font-size: 1.7rem;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar #close-menu-btn {
+    color: black;
+    font-size: 1.7rem;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: none;
+}
+
+
+
+@media screen and (max-width:900px) {
+
+    .navbar :is(#hamburger-btn, #close-menu-btn) {
+        display: block;
+    }
+
+    .navbar .menu-links {
+        background: #fff;
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        left: -300px;
+        top: 0;
+        display: block;
+        padding: 75px 40px 0;
+        max-width: 300px;
+        transition: left 0.2s ease;
+    }
+
+    header .show-mobile-menu .navbar .menu-links {
+        left: -500px;
+    }
+
+    .navbar .menu-links a {
+        color: black;
+        font-size: 1.1rem;
+    }
+
+    .navbar .menu-links .join-btn a {
+        padding: 0;
+    }
+
+    .navbar .menu-links .join-btn a:hover {
+        color: green;
+        background: none;
+    }
+
+
+    .navbar .menu-links li {
+        margin-bottom: 30px;
+    }
+
+    .hero-section {
+        background: none;
+
+    }
+
+    .hero-section .content:is(h1, .search-form) {
+        max-width: 100%;
+    }
+
+    .hero-section .content h1 {
+        text-align: center;
+        font-size: 2.5rem;
+        line-height: 55px;
+    }
+
+    .hero-section .search-form {
+        display: block;
+        margin-top: 20px;
+    }
+
+    .hero-section .search-form button {
+        width: 100%;
+        margin-top: 10px;
+        border-radius: 4px;
+    }
+
+    .hero-section .popular-tags {
+        display: none;
+    }
+
+    .hero-section .search-form input {
+        border-radius: 4px;
+
+    }
+}

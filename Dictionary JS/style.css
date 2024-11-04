@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgba(36, 36, 116, 0.712);
+}
+
+.wrapper {
+    width: 420px;
+    background: #fff;
+    border-radius: 7px;
+    padding: 28px 28px 45px;
+}
+
+.wrapper header {
+    font-size: 28px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.wrapper .search {
+    position: relative;
+    margin: 35px 0 18px;
+}
+
+.search input {
+    height: 53px;
+    width: 100%;
+    outline: none;
+    padding: 0 42px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #999;
+}
+
+.search input::placeholder {
+    color: #999;
+}
+
+.search input:focus {
+    padding: 0 41px;
+    border: 3px solid rgba(36, 36, 116, 0.712);
+}
+
+.search :where(i, span) {
+    position: absolute;
+    top: 50%;
+    color: #999;
+    transform: translateY(-50%);
+
+}
+
+.search i {
+    left: 18px;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.search input:focus~i {
+    color: rgba(36, 36, 116, 0.712);
+}
+
+.search span {
+    right: 15px;
+    font-size: 1;
+    cursor: pointer;
+    display: none;
+}
+
+.search input:valid~span {
+    display: block;
+}
+
+.wrapper ul {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.wrapper.active ul {
+    height: 303px;
+    opacity: 1;
+    ;
+}
+
+.wrapper.active .info-text {
+    display: none;
+}
+
+.wrapper .info-text {
+    font-size: 13px;
+    color: #999;
+    text-align: center;
+    margin: -3px 0 -10px;
+}
+
+.info-text span {
+    font-weight: 500;
+}
+
+.wrapper ul li {
+    display: flex;
+    margin-bottom: 14px;
+    padding-bottom: 17px;
+    border-bottom: 1px solid #ccc;
+    justify-content: space-between;
+
+}
+
+ul li:last-child {
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    border-bottom: 0px;
+}
+
+ul .word p {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+ul .word span {
+    font-size: 12px;
+    font-weight: 500;
+    color: #999;
+}
+
+ul .word i {
+    cursor: pointer;
+    font-size: 15px;
+    color: #999;
+}
+
+.content li .details {
+    padding-left: 10px;
+    border-radius: 4px 0 0 4px;
+    border-left: 3px solid rgba(36, 36, 116, 0.712);
+}
+
+.content li .details p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.content li .details span {
+    font-size: 15px;
+    color: #999;
+}
+
+.synonyms .details .list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.synonyms .details .list span {
+    cursor: pointer;
+    margin-right: 5px;
+    text-decoration: underline;
+}
